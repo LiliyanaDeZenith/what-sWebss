@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-whatscat-gray dark:bg-whatscat-darkBg text-gray-900 dark:text-gray-100;
+  }
+
+  input, textarea {
+    @apply dark:bg-whatscat-darkCard dark:text-white;
+  }
+}
+
+@layer utilities {
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .bubble-sent {
+    @apply bg-whatscat-light dark:bg-whatscat-darkBubble rounded-tr-none;
+  }
+  .bubble-received {
+    @apply bg-white dark:bg-whatscat-darkCard rounded-tl-none;
+  }
+}
